@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Prueba XpertGroup - Inicio";
+}
+
+<div>
+    <h1>Prueba técnica de .Net para XpertGroup</h1>
+    <h2>Coding Challenge: Cube Summation</h2>
+</div>
+<br/>
+<form asp-controller="Home" method="post">
+    <div class="form-group blue-border-focus">
+        <label for="formControlCodigoPrueba">Por favor, ingrese sus casos de prueba para las operaciones de cubos</label>
+        <br />
+        <textarea class="form-control" id="formControlCodigoPrueba" name="formControlCodigoPrueba" rows="15">@ViewData["Codigo"]</textarea>
+        <br />
+        <button type="submit" value="Ejecutar" class="btn btn-success" asp-action="Ejecutar">Ejecutar casos de prueba</button>
+    </div>
+
+    <div class="form-group green-border-focus">
+        <br />
+        <br />
+        <label for="formControlResultados">Resultados:</label>
+        <br />
+        <textarea class="form-control" id="formControlResultados" rows="15">@ViewData["Resultados"]</textarea>
+        <br />
+    </div>
+</form>
